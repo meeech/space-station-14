@@ -32,12 +32,6 @@ jobs:
             - run:
                 name: Run Content.Tests
                 command: dotnet test --no-build Content.Tests/Content.Tests.csproj -v n
-            - run:
-                name: Run Content.IntegrationTests
-                shell: pwsh
-                command: |
-                    $env:DOTNET_gcServer=1
-                    dotnet test --no-build Content.IntegrationTests/Content.IntegrationTests.csproj -v n
 
 workflows:
     build-workflow:
